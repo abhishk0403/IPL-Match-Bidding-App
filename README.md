@@ -37,8 +37,9 @@ FROM
 GROUP BY I.stadium_id , s.STADIUM_NAME , s.city
 ORDER BY match_count DESC;
 --------------------------------------------------------------------------------------------------------------------------------
--- How many all-rounders are there in each team, Display the teams with more than 4 all-rounders 
+ How many all-rounders are there in each team, Display the teams with more than 4 all-rounders 
  in descending order.
+
 SELECT 
       t.team_name,tp.PLAYER_ROLE,count(tp.PLAYER_ID) total_allrounders
 FROM
