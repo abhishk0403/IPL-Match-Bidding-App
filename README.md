@@ -22,8 +22,8 @@ IPL_Team_Standings: Contains details about IPL_teams statistics
 
 ## Queries
 Here are some of the key queries used in this project:
---------------------------------------------------------------------------------------------------------------------------------
--- Display the number of matches conducted at each stadium with the stadium name and city.
+
+ Display the number of matches conducted at each stadium with the stadium name and city.
 
 SELECT 
     I.stadium_id,
@@ -36,7 +36,7 @@ FROM
     ipl_stadium s ON s.stadium_id = i.stadium_id
 GROUP BY I.stadium_id , s.STADIUM_NAME , s.city
 ORDER BY match_count DESC;
---------------------------------------------------------------------------------------------------------------------------------
+
  How many all-rounders are there in each team, Display the teams with more than 4 all-rounders 
  in descending order.
 
@@ -54,7 +54,7 @@ FROM
 		tp.PLAYER_ROLE,t.team_name 
 	HAVING 
 		total_allrounders>4 ORDER BY total_allrounders DESC;
---------------------------------------------------------------------------------------------------------------------------------
+
 -- 11.	show the percentage of toss wins of each bidder and display the results in descending order based on the percentage
 
 SELECT 
